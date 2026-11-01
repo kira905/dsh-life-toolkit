@@ -171,3 +171,12 @@ node tools/verify-clean-home.mjs   # 灵魂判据：空 home 全链 + 召回结�
 ## 许可
 
 [AGPL-3.0-only](./LICENSE)。
+
+## 相关仓
+
+本仓是**开源支线**同批发布的一员，另外几个仓与它同属一条线：
+
+- **主文档仓** [`ops-handoff-design`](https://github.com/kira905/ops-handoff-design)：这套体系的方法论与设计稿（唯一权威叙述）。本仓的定位与登记见其中的 [`发布说明.md`](https://github.com/kira905/ops-handoff-design/blob/main/发布说明.md) **§4.5 组件索引表**（本仓是表里的一行）。镜像：[Gitee](https://gitee.com/kira905/ops-handoff-design)。
+- **姊妹仓** [`dsh-peer-toolkit`](https://github.com/kira905/dsh-peer-toolkit)：多机协同五件（信箱 / 选路 / 文本同步 / 按需隧道 + `transportProfile` 三档）。同一批首发；它管"机器之间"，本仓管"日子"。镜像：[Gitee](https://gitee.com/kira905/dsh-peer-toolkit)。
+
+> 三个仓各自**独立打 tag、独立发版**；跨仓引用一律给链接，不复制对方的正文。

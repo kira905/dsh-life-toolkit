@@ -165,3 +165,12 @@ node tools/verify-clean-home.mjs   # soul check: full chain in an empty home + h
 ## License
 
 [AGPL-3.0-only](./LICENSE).
+
+## Related repositories
+
+This repo is one member of an **open-source release batch**. The others on the same line:
+
+- **Main documentation repo** [`ops-handoff-design`](https://github.com/kira905/ops-handoff-design) — the methodology and design record behind this system (the single authoritative narrative). This repo's position is registered in [`发布说明.md`](https://github.com/kira905/ops-handoff-design/blob/main/发布说明.md) **§4.5 component index** (one row of that table). Mirror: [Gitee](https://gitee.com/kira905/ops-handoff-design).
+- **Sibling repo** [`dsh-peer-toolkit`](https://github.com/kira905/dsh-peer-toolkit) — five multi-host helpers (mailbox / route arbitration / text sync / on-demand tunnel + `transportProfile` tiers). Released in the same batch; it covers "machine to machine", this one covers "days". Mirror: [Gitee](https://gitee.com/kira905/dsh-peer-toolkit).
+
+> Each of the three repos tags and releases **independently**; cross-repo references give links rather than copying the other side's prose.
