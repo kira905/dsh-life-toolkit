@@ -1,0 +1,9 @@
+{"type":"session","seq":0,"time":1788314400000,"cwd":"/demo/running","agentPreset":"demo"}
+{"type":"turn/start","seq":1,"time":1788314400500}
+{"type":"user/message","seq":2,"time":1788314401000,"data":{"turn":1,"content":[{"type":"text","text":"最近跑步膝盖外侧有点疼，跑到三公里就开始，停下来就不疼。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":3,"time":1788314402000,"data":{"turn":1,"message":{"role":"assistant","content":[{"type":"text","text":"这个位置和时间和髂胫束摩擦的描述很像：外侧、固定距离起疼、停下就缓解。先减量、加臀中肌力量，两周不缓解再去看运动医学科。"}]}}}
+{"type":"turn/end","seq":4,"time":1788314402500}
+{"type":"turn/start","seq":5,"time":1788314410000}
+{"type":"user/message","seq":6,"time":1788314411000,"data":{"turn":2,"content":[{"type":"text","text":"我把每周跑量从四十公里降到二十五公里，先看看两周。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":7,"time":1788314412000,"data":{"turn":2,"message":{"role":"assistant","content":[{"type":"text","text":"降得对，别再配速加练。膝盖外侧疼的那几天改成骑车或游泳，把有氧量保住但别重复同一个摩擦动作。"}]}}}
+{"type":"turn/end","seq":8,"time":1788314412500}

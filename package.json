@@ -1,0 +1,63 @@
+{
+  "name": "@kira905/dsh-life-toolkit",
+  "version": "0.1.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "DSH 人生记忆工具集：把历史会话原文切块建索引（life.db + FTS5 trigram），每轮按需把「旧原话」捡回来 —— 建库脚本 + 索引器 + 召回插件 + 一份假会话语料",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "memory",
+    "session-log",
+    "sqlite",
+    "fts5",
+    "plugin"
+  ],
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "author": "kira905",
+  "homepage": "https://github.com/kira905/dsh-life-toolkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kira905/dsh-life-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kira905/dsh-life-toolkit/issues"
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "exports": {
+    "./plugin": "./plugin/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "bin": {
+    "dsh-life-init": "./cli/life-db-init.mjs",
+    "dsh-life-index": "./cli/life-index.mjs",
+    "dsh-life-recall": "./cli/life-recall.mjs"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "cli/",
+    "lib/",
+    "plugin/",
+    "fixtures/raw/",
+    "fixtures/build.mjs",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/run.mjs",
+    "fixtures": "node fixtures/build.mjs",
+    "verify": "node tools/verify-clean-home.mjs"
+  }
+}

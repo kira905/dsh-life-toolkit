@@ -1,0 +1,19 @@
+# 人生记忆插件 · bundle patch（一行插入）
+#
+# 语义：每轮 pre-step 从人生记忆库（life.db）里按词法捡 1~2 段**旧会话原话**，
+# 有命中才注入；只走 FTS5（不调编码服务），任何异常都 fail-open 放行。
+#
+# id 故意不叫 `life-memory`：那个 id 属于别人家/你自己已有的那条人生记忆插件。
+# 两个条目共用一个 id，在旧 loader 上会直接 boot 失败、在新的 loader 上会静默互相覆盖，
+# 而 `--dump-config` 两种情况下都照样打印两行 rc=0。一个槽位一个实现：装这个，就别同时装那条。
+#
+# dbPath 用 dshHomePath 解析 ⇒ 同一台机上的所有 profile 共用同一本人生存档。
+# topK / maxChars 是上下文预算闸（默认 2 段 / 320 字），跟工作记忆的指针段共用同一份预算，
+# 别调大。
+- insert:
+    - id: kira905-life-memory
+      name: '@kira905/dsh-life-toolkit/plugin'
+      config:
+        dbPath: !!js dshHomePath('memory-life/life.db')
+        topK: 2
+        maxChars: 320

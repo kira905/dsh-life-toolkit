@@ -1,0 +1,12 @@
+{"type":"session","seq":0,"time":1788228000000,"cwd":"/demo/whiteboard","agentPreset":"demo"}
+{"type":"turn/start","seq":1,"time":1788228000500}
+{"type":"user/message","seq":2,"time":1788228001000,"data":{"turn":1,"content":[{"type":"text","text":"我在给那个小画板想一个名字，想叫它「潮汐画板」，你觉得怎么样？"}],"source":{"kind":"user"}}}
+{"type":"user/message","seq":3,"time":1788228001500,"data":{"turn":1,"content":[{"type":"text","text":"[人生记忆·旧会话片段] 这段是系统注入的假记忆，不该被当成原话索引进来。"}],"source":{"kind":"memory-recall"}}}
+{"type":"assistant/message","seq":4,"time":1788228002000,"data":{"turn":1,"message":{"role":"assistant","content":[{"type":"reasoning","text":"他说的是给画板起名，别顺着名字跑题去聊编程语言选型。"},{"type":"text","text":"潮汐画板这个名字挺好：跟海有关系，不拗口，也不容易跟别的工具撞名。就是搜索的时候要小心，别跟涨潮退潮的 App 混在一起。"}]}}}
+{"type":"tool/call","seq":5,"time":1788228002500,"data":{"name":"demo_tool","arguments":"{\"x\":1}"}}
+{"type":"tool/result","seq":6,"time":1788228003000,"data":{"name":"demo_tool","content":"这是一段工具输出，不该进人生记忆的索引。"}}
+{"type":"turn/end","seq":7,"time":1788228003500}
+{"type":"turn/start","seq":8,"time":1788228010000}
+{"type":"user/message","seq":9,"time":1788228011000,"data":{"turn":2,"content":[{"type":"text","text":"配色我想好了：灯塔用暖黄色，海面用冷一点的蓝，这样对比明显。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":10,"time":1788228012000,"data":{"turn":2,"message":{"role":"assistant","content":[{"type":"text","text":"暖黄配冷蓝很稳：灯塔是画面里唯一的暖色块，视线自然被它抓走。海面别用纯蓝，加一点灰会更有雾感。"}]}}}
+{"type":"turn/end","seq":11,"time":1788228012500}

@@ -1,0 +1,14 @@
+node_modules/
+fixtures/build/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.log
+_tmp/
+.DSH-test*
+.env
+.env.*
+coverage/
+*.tmp

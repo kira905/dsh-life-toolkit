@@ -1,0 +1,13 @@
+{"type":"session","seq":0,"time":1788231600000,"cwd":"/demo/reading","agentPreset":"demo"}
+{"type":"turn/start","seq":1,"time":1788231600500}
+{"type":"user/message","seq":2,"time":1788231601000,"data":{"turn":1,"content":[{"type":"text","text":"周末把书架重新刷了一遍，木蜡油的味道散了两天才敢把书放回去。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":3,"time":1788231602000,"data":{"turn":1,"message":{"role":"assistant","content":[{"type":"text","text":"木蜡油干得慢，但手感和味道都比清漆好；两天散味算正常的，急着摞书容易把漆面压出印子。"}]}}}
+{"type":"turn/end","seq":4,"time":1788231602500}
+{"type":"turn/start","seq":5,"time":1788231610000}
+{"type":"user/message","seq":6,"time":1788231611000,"data":{"turn":2,"content":[{"type":"text","text":"旧书摊上淘到一本九十年代的画册，纸张黄得很均匀，闻着有点甜。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":7,"time":1788231612000,"data":{"turn":2,"message":{"role":"assistant","content":[{"type":"reasoning","text":"他喜欢旧纸的味道，别急着科普酸化和脱酸，先说人话。"},{"type":"text","text":"那种甜味多半是纸张老化产生的木质素分解物，闻着舒服，但确实说明纸在变脆。夹一张无酸纸进去能缓一缓。"}]}}}
+{"type":"turn/end","seq":8,"time":1788231612500}
+{"type":"turn/start","seq":9,"time":1788231620000}
+{"type":"user/message","seq":10,"time":1788231621000,"data":{"turn":3,"content":[{"type":"text","text":"那本画册我想放到客厅的矮柜上，别放阳台，怕晒。"}],"source":{"kind":"user"}}}
+{"type":"assistant/message","seq":11,"time":1788231622000,"data":{"turn":3,"message":{"role":"assistant","content":[{"type":"text","text":"对，阳光直射是纸最怕的东西。矮柜只要不靠暖气、不贴外墙就行，湿度大可以在柜子里放一小包干燥剂。"}]}}}
+{"type":"turn/end","seq":12,"time":1788231622500}

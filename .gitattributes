@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+# 压测/夹具产物是二进制，按字节原样保留（生成物，正常不入库）
+*.zstd -text
