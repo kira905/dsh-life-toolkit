@@ -1,5 +1,32 @@
 # dsh-life-toolkit
 
+> ### What this is
+> **Long-term memory for an agent**: index past session text and recall it on demand.
+>
+> ### What it solves
+> Working memory holds the "ledger" (where this task stands); life memory holds the "days" (why we decided that thing three months ago). The latter needs **raw text, not summaries** — a summary loses tone, context and the reasoning of the moment. This repo ships the `life.db` schema, an incremental indexer, a recall plugin, and **a synthetic corpus fixture** so anyone can run the whole chain without owning any real conversations.
+>
+> ### Run it in one command
+> ```powershell
+> npm i -g @kira905/dsh-life-toolkit
+> dsh-life-init           # create the DB (default <DSH_HOME>/memory-life/life.db)
+> dsh-life-index --apply  # incremental index
+> dsh-life-recall "why did we change the plan back then"
+> ```
+>
+> ### Real output
+> ```text
+> usage: node cli/life-db-init.mjs [--home <DSH root>] [--db <file>] [--json] [--help]
+>   --home <dir>    DSH data root (default $DSH_HOME, then ~/.dsh)
+>   --db <file>     database file (default <home>/memory-life/life.db)
+>   --json          machine-readable output
+>   --help          print this help only; reads nothing, creates nothing, writes nothing
+> ```
+>
+> 🔴 **Code and schema only**: `life.db` and any real conversation text never enter this repo.
+
+---
+
 > **Life memory: turn your past session logs into original quotes you can actually find again.**
 > Working memory (`memory.db`) keeps **conclusions**. This keeps the **days** — what you literally said, on which day, in which turn.
 
