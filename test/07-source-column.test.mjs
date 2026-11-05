@@ -41,12 +41,12 @@ function makeDb(sessionsDdl) {
 test('生产形态（sessions.src）⇒ 能读出来源，不是空结果', () => {
   const { db, dir } = makeDb({
     ddl: 'CREATE TABLE sessions(id TEXT PRIMARY KEY, root TEXT, src TEXT);',
-    seed: `INSERT INTO sessions(id,src) VALUES('session-A','m6800-life');`,
+    seed: `INSERT INTO sessions(id,src) VALUES('session-A','workstation-a');`,
   });
   try {
     const hits = searchChunks(db, '暖黄色', { topK: 3 });
     assertEq(hits.length, 1, '必须命中 1 条（写死 s.source 时这里是 0 —— 静默空检索）');
-    assertEq(hits[0].source, 'm6800-life', '来源取的是 src 的值');
+    assertEq(hits[0].source, 'workstation-a', '来源取的是 src 的值');
     assertEq(hits[0].text, '灯塔我想用暖黄色', '正文原样');
   } finally {
     db.close();
@@ -57,12 +57,12 @@ test('生产形态（sessions.src）⇒ 能读出来源，不是空结果', () =
 test('老开源形态（sessions.source）⇒ 照样能读（改名会把雷挖到另一边）', () => {
   const { db, dir } = makeDb({
     ddl: "CREATE TABLE sessions(id TEXT PRIMARY KEY, source TEXT NOT NULL DEFAULT 'local');",
-    seed: `INSERT INTO sessions(id,source) VALUES('session-A','m6800-life');`,
+    seed: `INSERT INTO sessions(id,source) VALUES('session-A','workstation-a');`,
   });
   try {
     const hits = searchChunks(db, '暖黄色', { topK: 3 });
     assertEq(hits.length, 1, '老库也必须命中');
-    assertEq(hits[0].source, 'm6800-life', '来源取的是 source 的值');
+    assertEq(hits[0].source, 'workstation-a', '来源取的是 source 的值');
   } finally {
     db.close();
     rmDir(dir);
